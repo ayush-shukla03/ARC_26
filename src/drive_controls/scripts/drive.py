@@ -2,10 +2,8 @@
 
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import Float32MultiArray
 from std_msgs.msg import Int32MultiArray
 from sensor_msgs.msg import Joy
-from rclpy.executors import MultiThreadedExecutor
 import math
 
 
