@@ -23,7 +23,7 @@ class Drive(Node):
         # Subscriber
         self.subscription = self.create_subscription(
             Joy,
-            '/joy0',
+            '/joy',
             self.callback,
             10
         )
@@ -36,6 +36,9 @@ class Drive(Node):
             10
         )
 
+        #timer
+        self.timer = self.create_timer(0.02, self.publish_rover)  # 50 Hz
+
         
 
     def callback(self, msg):
@@ -43,6 +46,8 @@ class Drive(Node):
         self.rotational = msg.axes[0]
         self.speed = msg.axes[2]  # assume trigger 0→1
 
+    
+    def publish_rover(self):
         self.move()
 
     def move(self):
