@@ -35,7 +35,7 @@ class Drive(Node):
         )
 
         #timer
-        self.timer = self.create_timer(0.02, self.publish_rover)  # 50 Hz
+        self.timer = self.create_timer(0.02, self.move)  # 50 Hz
 
         
 
@@ -44,9 +44,6 @@ class Drive(Node):
         self.rotational = msg.axes[0]
         self.speed = msg.axes[2]  # assume trigger 0→1
 
-    
-    def publish_rover(self):
-        self.move()
 
     def move(self):
 
