@@ -39,19 +39,19 @@ int lw1 = 0;
 int lw2 = 0;
 int lw3 = 0;
 
-#define lw1_speed 4
-#define rw1_speed 6
-#define lw2_speed 10
-#define rw2_speed 12
-#define lw3_speed 42
-#define rw3_speed 40
+#define lw1_speed 5 //
+#define rw1_speed 7 //
+#define lw2_speed 11 //
+#define rw2_speed 13 //
+#define lw3_speed 41 // 
+#define rw3_speed 39 //
 
-#define lw1_dir 5
-#define rw1_dir 7
-#define lw2_dir 11
-#define rw2_dir 13
-#define lw3_dir 41
-#define rw3_dir 39
+#define lw1_dir 4 //
+#define rw1_dir 6 //
+#define lw2_dir 10 //
+#define rw2_dir 12 //
+#define lw3_dir 42 //
+#define rw3_dir 40 //
 
 
 
@@ -142,7 +142,7 @@ bool create_entities()
      - namespace
      - ROS_DOMAIN_ID
   */
-  const char * node_name = "drive_node";
+  const char * node_name = "drive_node_microros";
   const char * ns = "";
   const int domain_id = 0;
   
