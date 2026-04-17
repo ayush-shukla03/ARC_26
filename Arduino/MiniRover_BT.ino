@@ -23,31 +23,23 @@
 // strandtest example for more information on possible values.
 Adafruit_NeoPixel strip(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
+enum mode {differential, rotate, ackermann, crabwalk};
+
+mode operation = differential;
 //dabble headers
 #define CUSTOM_SETTINGS
 #define INCLUDE_GAMEPAD_MODULE
 #include <DabbleESP32.h>
 
+int lastTriangleState = 0;
+int lastCircleState = 0;
+int lastCrossState = 0;
+int lastSquareState = 0;
+
+
 const uint8_t pins[] = {4,6,10,12,42,40,  // row of speed pins
                         5,7,11,13,41,39}; // corresponding dir pins
-// 0 -> left 1 speed
-// 1 -> right 1 speed
-// 2 -> left 2 speed
-// 3 -> right 2 speed
-// 4 -> left 3 speed
-// 5 -> right 3 speed
-// 0+6 -> left 1 dir
-// 1+6 -> right 1 dir
-// 2+6 -> left 2 dir
-// 3+6 -> right 2 dir
-// 4+6 -> left 3 dir
-// 5+6 -> right 3 dir
-inline uint16_t joy2pwm(float axis) {
-  return (uint16_t)(255.0*(abs(axis)))/14.0;
-}
-inline bool joy2dir(float axis) {
-  return axis > 0 ? true : false;
-}
+
 volatile bool app_is_connected = false;
 void setup() {
   // put your setup code here, to run once:
@@ -92,24 +84,33 @@ void loop() {
   Serial.print(d);
   Serial.print('\t');
 
-  int triangle = GamePad.isTrianglePressed();
+  int triangleState = GamePad.isTrianglePressed();
   Serial.print("Triangle: ");
-  Serial.print(triangle);
+  Serial.print(triangleState);
   Serial.print('\t');
 
-  int square = GamePad.isSquarePressed();
+  int squareState = GamePad.isSquarePressed();
   Serial.print("Square: ");
-  Serial.print(square);
+  Serial.print(squareState);
   Serial.print('\t');
 
-  int cross = GamePad.isCrossPressed();
+  int crossState = GamePad.isCrossPressed();
   Serial.print("Cross: ");
-  Serial.print(cross);
+  Serial.print(crossState);
   Serial.print('\t');
 
-  int circle = GamePad.isCirclePressed();
+  int circleState = GamePad.isCirclePressed();
   Serial.print("Circle: ");
-  Serial.print(circle);
+  Serial.print(circleState);
+  Serial.print('\t');
+
+  if (triangleState == 1 && lastTriangleState == 0) {operation = differential; /*lastTriangleState = triangleState;*/}
+  else if (squareState == 1 && lastSquareState == 0) {operation = ackermann; /*lastSquareState = squareState;*/}
+  else if (crossState == 1 && lastCrossState == 0) {operation = crabwalk; /*lastCrossState = crossState;*/}
+  else if (circleState == 1 && lastCircleState == 0) {operation = rotate; /*lastCircleState = circleState;*/}
+
+  Serial.print(operation);
   Serial.println("");
+
 
 }
