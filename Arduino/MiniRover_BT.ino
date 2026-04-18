@@ -36,9 +36,23 @@ int lastCircleState = 0;
 int lastCrossState = 0;
 int lastSquareState = 0;
 
+#define Drive_speed 12
+#define L_drive_dir 14
+#define R_drive_dir 15
 
-const uint8_t pins[] = {4,6,10,12,42,40,  // row of speed pins
-                        5,7,11,13,41,39}; // corresponding dir pins
+#define LF_steer_dir 16
+#define RF_steer_dir 17
+#define LB_steer_dir 18
+#define RB_steer_dir 21
+
+#define LF_steer_speed 47
+#define RF_steer_speed 48
+
+
+
+
+const uint8_t pins[] = {12,13,47,48,  // row of speed pins
+                        14,15,16,17,18,21}; // corresponding dir pins
 
 volatile bool app_is_connected = false;
 void setup() {
@@ -75,13 +89,13 @@ void loop() {
     strip.setPixelColor(0, strip.Color(255,0,0));
   }
   strip.show();
-  float c = GamePad.getXaxisData();
+  float x = GamePad.getXaxisData();
   Serial.print("x_axis: ");
-  Serial.print(c);
+  Serial.print(x);
   Serial.print('\t');
-  float d = GamePad.getYaxisData();
+  float y = GamePad.getYaxisData();
   Serial.print("y_axis: ");
-  Serial.print(d);
+  Serial.print(y);
   Serial.print('\t');
 
   int triangleState = GamePad.isTrianglePressed();
@@ -111,6 +125,66 @@ void loop() {
 
   Serial.print(operation);
   Serial.println("");
+
+  if(abs(x)<2) x = 0;
+  if(abs(y)<2) y = 0;
+
+  switch(operation){
+    case 0:
+      //code
+      if(y >= 0){
+        digitalWrite(L_drive_dir, HIGH);
+        digitalWrite(R_drive_dir, HIGH);
+      }
+
+      else if(y < 0){
+        digitalWrite(L_drive_dir, LOW);
+        digitalWrite(R_drive_dir, LOW);
+      }
+
+      else if(x > 0){
+        digitalWrite(L_drive_dir, HIGH);
+        digitalWrite(R_drive_dir, LOW);
+      }
+
+      else if(x < 0){
+        digitalWrite(L_drive_dir, LOW);
+        digitalWrite(R_drive_dir, HIGH);
+      }
+
+      analogWrite(Drive_speed, (abs(y)/7)*255);
+
+    case 2:
+      if (GamePad.isUpPressed()){
+        digitalWrite(L_drive_dir, HIGH);
+        digitalWrite(R_drive_dir, HIGH);
+        analogWrite(Drive_speed, 123);
+      }
+
+      else if(GamePad.isDownPressed()){
+        digitalWrite(L_drive_dir, LOW);
+        digitalWrite(R_drive_dir, LOW);
+        analogWrite(Drive_speed, 123);
+      }
+
+      if(GamePad.isLeftPressed()){
+        digitalWrite(RF_steer_dir, HIGH);
+        digitalWrite(LF_steer_dir, HIGH);
+        analogWrite(RF_steer_speed, 100);
+        analogWrite(LF_steer_speed, 100);
+      }
+
+      else if(GamePad.isRightPressed()){
+        digitalWrite(RF_steer_dir, LOW);
+        digitalWrite(LF_steer_dir, LOW);
+        analogWrite(RF_steer_speed, 100);
+        analogWrite(LF_steer_speed, 100);
+      }
+
+    default:
+      analogWrite(Drive_speed, 0);
+     
+  }
 
 
 }
