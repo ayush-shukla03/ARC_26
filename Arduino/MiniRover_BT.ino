@@ -26,6 +26,7 @@ Adafruit_NeoPixel strip(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 enum mode {differential, rotate, ackermann, crabwalk};
 
 mode operation = differential;
+
 //dabble headers
 #define CUSTOM_SETTINGS
 #define INCLUDE_GAMEPAD_MODULE
@@ -47,10 +48,14 @@ int lastSquareState = 0;
 
 #define LF_steer_speed 47
 #define RF_steer_speed 48
-
-
-
-
+#define LB_steer_speed 3
+#define RB_steer_speed 35
+float y;
+float x;
+int triangleState;
+int circleState;
+int crossState;
+int squareState;
 const uint8_t pins[] = {12,13,47,48,  // row of speed pins
                         14,15,16,17,18,21}; // corresponding dir pins
 
@@ -88,103 +93,146 @@ void loop() {
   else{
     strip.setPixelColor(0, strip.Color(255,0,0));
   }
+  
   strip.show();
-  float x = GamePad.getXaxisData();
-  Serial.print("x_axis: ");
-  Serial.print(x);
-  Serial.print('\t');
-  float y = GamePad.getYaxisData();
-  Serial.print("y_axis: ");
-  Serial.print(y);
-  Serial.print('\t');
+  x = GamePad.getXaxisData();
+  // Serial.print("x_axis: ");
+  // Serial.print(x);mode
+  // Serial.print('\t');
+
+  y = GamePad.getYaxisData();
+  // Serial.print("y_axis: ");
+  // Serial.print(y);
+  // Serial.print('\t');
 
   int triangleState = GamePad.isTrianglePressed();
-  Serial.print("Triangle: ");
-  Serial.print(triangleState);
-  Serial.print('\t');
+  // Serial.print("Triangle: ");
+  // Serial.print(triangleState);
+  // Serial.print('\t');
 
   int squareState = GamePad.isSquarePressed();
-  Serial.print("Square: ");
-  Serial.print(squareState);
-  Serial.print('\t');
+  // Serial.print("Square: ");
+  // Serial.print(squareState);
+  // Serial.print('\t');
 
   int crossState = GamePad.isCrossPressed();
-  Serial.print("Cross: ");
-  Serial.print(crossState);
-  Serial.print('\t');
+  // Serial.print("Cross: ");
+  // Serial.print(crossState);
+  // Serial.print('\t');
 
   int circleState = GamePad.isCirclePressed();
-  Serial.print("Circle: ");
-  Serial.print(circleState);
-  Serial.print('\t');
+  // Serial.print("Circle: ");
+  // Serial.print(circleState);
+  // Serial.print('\t');
 
-  if (triangleState == 1 && lastTriangleState == 0) {operation = differential; /*lastTriangleState = triangleState;*/}
-  else if (squareState == 1 && lastSquareState == 0) {operation = ackermann; /*lastSquareState = squareState;*/}
-  else if (crossState == 1 && lastCrossState == 0) {operation = crabwalk; /*lastCrossState = crossState;*/}
-  else if (circleState == 1 && lastCircleState == 0) {operation = rotate; /*lastCircleState = circleState;*/}
+  if (triangleState == 1 && operation!=differential) {operation = differential; /*lastTriangleState = triangleState;*/}
+  else if (squareState == 1 && operation!=ackermann) {operation = ackermann; /*lastSquareState = squareState;*/}
+  else if (crossState == 1 && operation!=crabwalk) {operation = crabwalk; /*lastCrossState = crossState;*/}
+  else if (circleState == 1 && operation!=rotate) {operation = rotate; /*lastCircleState = circleState;*/}
 
-  Serial.print(operation);
-  Serial.println("");
+  // Serial.print(operation);
+  // Serial.println("");
 
   if(abs(x)<2) x = 0;
   if(abs(y)<2) y = 0;
 
   switch(operation){
-    case 0:
-      //code
-      if(y >= 0){
-        digitalWrite(L_drive_dir, HIGH);
-        digitalWrite(R_drive_dir, HIGH);
+    case differential:
+      if(y==0)
+      {
+        digitalWrite(L_drive_dir, x>0?HIGH:LOW);
+        digitalWrite(R_drive_dir, x>0?LOW:HIGH);
+        print_debug();
+        analogWrite(Drive_speed,(abs(x)/7)*255);
+      }
+      else
+      {
+        digitalWrite(L_drive_dir, y>0?HIGH:LOW);
+        digitalWrite(R_drive_dir, y>0?HIGH:LOW);
+        analogWrite(Drive_speed, (abs(y)/7)*255);
       }
 
-      else if(y < 0){
-        digitalWrite(L_drive_dir, LOW);
-        digitalWrite(R_drive_dir, LOW);
+        break;
+
+    case crabwalk:
+
+      if(x==0&&y==0)
+      {
+        analogWrite(LB_steer_speed,0);
+        analogWrite(LF_steer_speed,0);
+        analogWrite(RF_steer_speed,0);
+        analogWrite(RB_steer_speed,0);
+        analogWrite(Drive_speed,0);
+        print_debug();
+        break;
+
       }
 
-      else if(x > 0){
-        digitalWrite(L_drive_dir, HIGH);
-        digitalWrite(R_drive_dir, LOW);
+      if(fabs(x)>fabs(y))
+      {
+        digitalWrite(LF_steer_dir,x>0?HIGH:LOW);
+        digitalWrite(RF_steer_dir,x>0?HIGH:LOW);
+        digitalWrite(RB_steer_dir,x>0?HIGH:LOW);
+        digitalWrite(LB_steer_dir,x>0?HIGH:LOW);
+
+        analogWrite(LB_steer_speed,75);
+        analogWrite(LF_steer_speed,75);
+        analogWrite(RF_steer_speed,75);
+        analogWrite(RB_steer_speed,75);
+        analogWrite(Drive_speed,0);
       }
+      else
+      {
+        analogWrite(LB_steer_speed,0);
+        analogWrite(LF_steer_speed,0);
+        analogWrite(RF_steer_speed,0);
+        analogWrite(RB_steer_speed,0);
 
-      else if(x < 0){
-        digitalWrite(L_drive_dir, LOW);
-        digitalWrite(R_drive_dir, HIGH);
+        digitalWrite(L_drive_dir,y>0?HIGH:LOW);
+        digitalWrite(R_drive_dir,y>0?HIGH:LOW);
+        analogWrite(Drive_speed,(fabs(y)/7)*255);
       }
-
-      analogWrite(Drive_speed, (abs(y)/7)*255);
-
-    case 2:
-      if (GamePad.isUpPressed()){
-        digitalWrite(L_drive_dir, HIGH);
-        digitalWrite(R_drive_dir, HIGH);
-        analogWrite(Drive_speed, 123);
-      }
-
-      else if(GamePad.isDownPressed()){
-        digitalWrite(L_drive_dir, LOW);
-        digitalWrite(R_drive_dir, LOW);
-        analogWrite(Drive_speed, 123);
-      }
-
-      if(GamePad.isLeftPressed()){
-        digitalWrite(RF_steer_dir, HIGH);
-        digitalWrite(LF_steer_dir, HIGH);
-        analogWrite(RF_steer_speed, 100);
-        analogWrite(LF_steer_speed, 100);
-      }
-
-      else if(GamePad.isRightPressed()){
-        digitalWrite(RF_steer_dir, LOW);
-        digitalWrite(LF_steer_dir, LOW);
-        analogWrite(RF_steer_speed, 100);
-        analogWrite(LF_steer_speed, 100);
-      }
-
+      break;
     default:
       analogWrite(Drive_speed, 0);
+      analogWrite(LF_steer_speed,0);
+      analogWrite(RF_steer_speed,0);
+      break;
      
   }
+
+
+}
+
+
+void print_debug()
+{
+  
+  Serial.print("x_axis: ");
+  Serial.print(x);
+  Serial.print('\t');
+
+  Serial.print("y_axis: ");
+  Serial.print(y);
+  Serial.print('\t');
+
+  Serial.print("Triangle: ");
+  Serial.print(triangleState);
+  Serial.print('\t');
+
+  Serial.print("Square: ");
+  Serial.print(squareState);
+  Serial.print('\t');
+
+  Serial.print("Cross: ");
+  Serial.print(crossState);
+  Serial.print('\t');
+
+  Serial.print("Circle: ");
+  Serial.print(circleState);
+  Serial.print('\t');
+  Serial.print("millis: ");
+  Serial.println(millis());
 
 
 }
