@@ -39,19 +39,19 @@ int lw1 = 0;
 int lw2 = 0;
 int lw3 = 0;
 
-#define lw1_speed 5 //
-#define rw1_speed 7 //
-#define lw2_speed 11 //
-#define rw2_speed 13 //
-#define lw3_speed 41 // 
-#define rw3_speed 39 //
+#define lw1_speed 7 //
+#define rw1_speed 5 //
+#define lw2_speed 13 //
+#define rw2_speed 11 //
+#define lw3_speed 39 // 
+#define rw3_speed 41 //
 
-#define lw1_dir 4 //
-#define rw1_dir 6 //
-#define lw2_dir 10 //
-#define rw2_dir 12 //
-#define lw3_dir 42 //
-#define rw3_dir 40 //
+#define lw1_dir 6 //
+#define rw1_dir 4 //
+#define lw2_dir 12 //
+#define rw2_dir 10 //
+#define lw3_dir 40 //
+#define rw3_dir 42 //
 
 
 
@@ -293,22 +293,23 @@ void loop() {
     digitalWrite(LED_PIN, 1);
 
     if(lw1 > 0 && rw1 > 0){
-      digitalWrite(lw1_dir, LOW);
-      digitalWrite(lw2_dir, LOW);
-      digitalWrite(lw3_dir, LOW);
-      digitalWrite(rw1_dir, LOW);
-      digitalWrite(rw2_dir, LOW);
-      digitalWrite(rw3_dir, LOW);
-  }
-
-    
-  else if(lw1 < 0 && rw1 < 0){
+      
       digitalWrite(lw1_dir, HIGH);
       digitalWrite(lw2_dir, HIGH);
       digitalWrite(lw3_dir, HIGH);
       digitalWrite(rw1_dir, HIGH);
       digitalWrite(rw2_dir, HIGH);
       digitalWrite(rw3_dir, HIGH);
+  }
+
+    
+  else if(lw1 < 0 && rw1 < 0){
+      digitalWrite(lw1_dir, LOW);
+      digitalWrite(lw2_dir, LOW);
+      digitalWrite(lw3_dir, LOW);
+      digitalWrite(rw1_dir, LOW);
+      digitalWrite(rw2_dir, LOW);
+      digitalWrite(rw3_dir, LOW);
   }
 
   else if(lw1 > 0 && rw1 < 0){
