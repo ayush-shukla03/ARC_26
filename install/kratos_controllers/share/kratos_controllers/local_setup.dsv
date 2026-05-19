@@ -1,0 +1,2 @@
+source;share/kratos_controllers/environment/ament_prefix_path.sh
+source;share/kratos_controllers/environment/path.sh
