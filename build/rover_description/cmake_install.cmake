@@ -48,6 +48,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/ayush/ARC_26/src/rover_description/meshes"
     "/home/ayush/ARC_26/src/rover_description/rviz"
     "/home/ayush/ARC_26/src/rover_description/urdf"
+    "/home/ayush/ARC_26/src/rover_description/config"
     )
 endif()
 

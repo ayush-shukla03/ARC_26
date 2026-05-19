@@ -1,0 +1,189 @@
+[0.090s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'kratos_controllers']
+[0.090s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=20, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['kratos_controllers'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7a10ea98eb90>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7a10ea98e470>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7a10ea98e470>>, mixin_verb=('build',))
+[0.172s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.172s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.172s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.172s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.172s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.172s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.172s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ayush/ARC_26'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(Arduino) by extensions ['ignore', 'ignore_ament_install']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(Arduino) by extension 'ignore'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(Arduino) by extension 'ignore_ament_install'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(Arduino) by extensions ['colcon_pkg']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(Arduino) by extension 'colcon_pkg'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(Arduino) by extensions ['colcon_meta']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(Arduino) by extension 'colcon_meta'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(Arduino) by extensions ['ros']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(Arduino) by extension 'ros'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(Arduino) by extensions ['cmake', 'python']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(Arduino) by extension 'cmake'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(Arduino) by extension 'python'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(Arduino) by extensions ['python_setup_py']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(Arduino) by extension 'python_setup_py'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_controls) by extensions ['ignore', 'ignore_ament_install']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_controls) by extension 'ignore'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_controls) by extension 'ignore_ament_install'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_controls) by extensions ['colcon_pkg']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_controls) by extension 'colcon_pkg'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_controls) by extensions ['colcon_meta']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_controls) by extension 'colcon_meta'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_controls) by extensions ['ros']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_controls) by extension 'ros'
+[0.197s] DEBUG:colcon.colcon_core.package_identification:Package 'src/drive_controls' with type 'ros.ament_cmake' and name 'drive_controls'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/kratos_controllers) by extensions ['ignore', 'ignore_ament_install']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/kratos_controllers) by extension 'ignore'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/kratos_controllers) by extension 'ignore_ament_install'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/kratos_controllers) by extensions ['colcon_pkg']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/kratos_controllers) by extension 'colcon_pkg'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/kratos_controllers) by extensions ['colcon_meta']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/kratos_controllers) by extension 'colcon_meta'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/kratos_controllers) by extensions ['ros']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/kratos_controllers) by extension 'ros'
+[0.197s] DEBUG:colcon.colcon_core.package_identification:Package 'src/kratos_controllers' with type 'ros.ament_cmake' and name 'kratos_controllers'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_description) by extensions ['ignore', 'ignore_ament_install']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_description) by extension 'ignore'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_description) by extension 'ignore_ament_install'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_description) by extensions ['colcon_pkg']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_description) by extension 'colcon_pkg'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_description) by extensions ['colcon_meta']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_description) by extension 'colcon_meta'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_description) by extensions ['ros']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/rover_description) by extension 'ros'
+[0.198s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rover_description' with type 'ros.ament_cmake' and name 'rover_description'
+[0.198s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.198s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.198s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.198s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.198s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.210s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'drive_controls' in 'src/drive_controls'
+[0.210s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'rover_description' in 'src/rover_description'
+[0.210s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.210s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.211s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/ayush/ARC_26/install
+[0.212s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 11 installed packages in /home/ayush/controls_ws/install
+[0.212s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 42 installed packages in /home/ayush/microros_ws/install
+[0.213s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 311 installed packages in /opt/ros/humble
+[0.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'kratos_controllers' build argument 'cmake_args' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'kratos_controllers' build argument 'cmake_target' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'kratos_controllers' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'kratos_controllers' build argument 'cmake_clean_cache' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'kratos_controllers' build argument 'cmake_clean_first' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'kratos_controllers' build argument 'cmake_force_configure' from command line to 'False'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'kratos_controllers' build argument 'ament_cmake_args' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'kratos_controllers' build argument 'catkin_cmake_args' from command line to 'None'
+[0.232s] Level 5:colcon.colcon_core.verb:set package 'kratos_controllers' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.232s] DEBUG:colcon.colcon_core.verb:Building package 'kratos_controllers' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ayush/ARC_26/build/kratos_controllers', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ayush/ARC_26/install/kratos_controllers', 'merge_install': False, 'path': '/home/ayush/ARC_26/src/kratos_controllers', 'symlink_install': False, 'test_result_base': None}
+[0.232s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.233s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.233s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ayush/ARC_26/src/kratos_controllers' with build type 'ament_cmake'
+[0.233s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ayush/ARC_26/src/kratos_controllers'
+[0.234s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.234s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.234s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.244s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ayush/ARC_26/build/kratos_controllers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ayush/microros_ws/install/sensor_msgs_py:/home/ayush/microros_ws/install/my_py_pkg:/home/ayush/microros_ws/install/my_py_node:/home/ayush/microros_ws/install/joy_bridge:/home/ayush/controls_ws/install/my_py_pkg:/home/ayush/controls_ws/install/joy_bridge:/home/ayush/controls_ws/install/drive_led_pkg:/opt/ros/humble /usr/bin/cmake /home/ayush/ARC_26/src/kratos_controllers -DCMAKE_INSTALL_PREFIX=/home/ayush/ARC_26/install/kratos_controllers
+[1.030s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ayush/ARC_26/build/kratos_controllers' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ayush/microros_ws/install/sensor_msgs_py:/home/ayush/microros_ws/install/my_py_pkg:/home/ayush/microros_ws/install/my_py_node:/home/ayush/microros_ws/install/joy_bridge:/home/ayush/controls_ws/install/my_py_pkg:/home/ayush/controls_ws/install/joy_bridge:/home/ayush/controls_ws/install/drive_led_pkg:/opt/ros/humble /usr/bin/cmake /home/ayush/ARC_26/src/kratos_controllers -DCMAKE_INSTALL_PREFIX=/home/ayush/ARC_26/install/kratos_controllers
+[1.034s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ayush/ARC_26/build/kratos_controllers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ayush/microros_ws/install/sensor_msgs_py:/home/ayush/microros_ws/install/my_py_pkg:/home/ayush/microros_ws/install/my_py_node:/home/ayush/microros_ws/install/joy_bridge:/home/ayush/controls_ws/install/my_py_pkg:/home/ayush/controls_ws/install/joy_bridge:/home/ayush/controls_ws/install/drive_led_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ayush/ARC_26/build/kratos_controllers -- -j20 -l20
+[6.524s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ayush/ARC_26/build/kratos_controllers' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ayush/microros_ws/install/sensor_msgs_py:/home/ayush/microros_ws/install/my_py_pkg:/home/ayush/microros_ws/install/my_py_node:/home/ayush/microros_ws/install/joy_bridge:/home/ayush/controls_ws/install/my_py_pkg:/home/ayush/controls_ws/install/joy_bridge:/home/ayush/controls_ws/install/drive_led_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ayush/ARC_26/build/kratos_controllers -- -j20 -l20
+[6.538s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ayush/ARC_26/build/kratos_controllers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ayush/microros_ws/install/sensor_msgs_py:/home/ayush/microros_ws/install/my_py_pkg:/home/ayush/microros_ws/install/my_py_node:/home/ayush/microros_ws/install/joy_bridge:/home/ayush/controls_ws/install/my_py_pkg:/home/ayush/controls_ws/install/joy_bridge:/home/ayush/controls_ws/install/drive_led_pkg:/opt/ros/humble /usr/bin/cmake --install /home/ayush/ARC_26/build/kratos_controllers
+[6.560s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(kratos_controllers)
+[6.561s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ayush/ARC_26/build/kratos_controllers' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ayush/microros_ws/install/sensor_msgs_py:/home/ayush/microros_ws/install/my_py_pkg:/home/ayush/microros_ws/install/my_py_node:/home/ayush/microros_ws/install/joy_bridge:/home/ayush/controls_ws/install/my_py_pkg:/home/ayush/controls_ws/install/joy_bridge:/home/ayush/controls_ws/install/drive_led_pkg:/opt/ros/humble /usr/bin/cmake --install /home/ayush/ARC_26/build/kratos_controllers
+[6.565s] Level 1:colcon.colcon_core.environment:checking '/home/ayush/ARC_26/install/kratos_controllers' for CMake module files
+[6.565s] Level 1:colcon.colcon_core.environment:checking '/home/ayush/ARC_26/install/kratos_controllers' for CMake config files
+[6.566s] Level 1:colcon.colcon_core.shell:create_environment_hook('kratos_controllers', 'cmake_prefix_path')
+[6.566s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/hook/cmake_prefix_path.ps1'
+[6.567s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/hook/cmake_prefix_path.dsv'
+[6.567s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/hook/cmake_prefix_path.sh'
+[6.568s] Level 1:colcon.colcon_core.environment:checking '/home/ayush/ARC_26/install/kratos_controllers/lib'
+[6.569s] Level 1:colcon.colcon_core.shell:create_environment_hook('kratos_controllers', 'ld_library_path_lib')
+[6.569s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/hook/ld_library_path_lib.ps1'
+[6.569s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/hook/ld_library_path_lib.dsv'
+[6.570s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/hook/ld_library_path_lib.sh'
+[6.570s] Level 1:colcon.colcon_core.environment:checking '/home/ayush/ARC_26/install/kratos_controllers/bin'
+[6.570s] Level 1:colcon.colcon_core.environment:checking '/home/ayush/ARC_26/install/kratos_controllers/lib/pkgconfig/kratos_controllers.pc'
+[6.571s] Level 1:colcon.colcon_core.environment:checking '/home/ayush/ARC_26/install/kratos_controllers/lib/python3.10/site-packages'
+[6.571s] Level 1:colcon.colcon_core.environment:checking '/home/ayush/ARC_26/install/kratos_controllers/bin'
+[6.571s] INFO:colcon.colcon_core.shell:Creating package script '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/package.ps1'
+[6.572s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/package.dsv'
+[6.573s] INFO:colcon.colcon_core.shell:Creating package script '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/package.sh'
+[6.574s] INFO:colcon.colcon_core.shell:Creating package script '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/package.bash'
+[6.574s] INFO:colcon.colcon_core.shell:Creating package script '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/package.zsh'
+[6.575s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ayush/ARC_26/install/kratos_controllers/share/colcon-core/packages/kratos_controllers)
+[6.576s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(kratos_controllers)
+[6.576s] Level 1:colcon.colcon_core.environment:checking '/home/ayush/ARC_26/install/kratos_controllers' for CMake module files
+[6.576s] Level 1:colcon.colcon_core.environment:checking '/home/ayush/ARC_26/install/kratos_controllers' for CMake config files
+[6.576s] Level 1:colcon.colcon_core.shell:create_environment_hook('kratos_controllers', 'cmake_prefix_path')
+[6.577s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/hook/cmake_prefix_path.ps1'
+[6.577s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/hook/cmake_prefix_path.dsv'
+[6.577s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/hook/cmake_prefix_path.sh'
+[6.578s] Level 1:colcon.colcon_core.environment:checking '/home/ayush/ARC_26/install/kratos_controllers/lib'
+[6.578s] Level 1:colcon.colcon_core.shell:create_environment_hook('kratos_controllers', 'ld_library_path_lib')
+[6.578s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/hook/ld_library_path_lib.ps1'
+[6.579s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/hook/ld_library_path_lib.dsv'
+[6.579s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/hook/ld_library_path_lib.sh'
+[6.579s] Level 1:colcon.colcon_core.environment:checking '/home/ayush/ARC_26/install/kratos_controllers/bin'
+[6.579s] Level 1:colcon.colcon_core.environment:checking '/home/ayush/ARC_26/install/kratos_controllers/lib/pkgconfig/kratos_controllers.pc'
+[6.580s] Level 1:colcon.colcon_core.environment:checking '/home/ayush/ARC_26/install/kratos_controllers/lib/python3.10/site-packages'
+[6.580s] Level 1:colcon.colcon_core.environment:checking '/home/ayush/ARC_26/install/kratos_controllers/bin'
+[6.580s] INFO:colcon.colcon_core.shell:Creating package script '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/package.ps1'
+[6.581s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/package.dsv'
+[6.581s] INFO:colcon.colcon_core.shell:Creating package script '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/package.sh'
+[6.582s] INFO:colcon.colcon_core.shell:Creating package script '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/package.bash'
+[6.582s] INFO:colcon.colcon_core.shell:Creating package script '/home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/package.zsh'
+[6.583s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ayush/ARC_26/install/kratos_controllers/share/colcon-core/packages/kratos_controllers)
+[6.583s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[6.584s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[6.584s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[6.584s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[6.591s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[6.591s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[6.591s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[6.608s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[6.609s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ayush/ARC_26/install/local_setup.ps1'
+[6.610s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ayush/ARC_26/install/_local_setup_util_ps1.py'
+[6.611s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ayush/ARC_26/install/setup.ps1'
+[6.615s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ayush/ARC_26/install/local_setup.sh'
+[6.615s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ayush/ARC_26/install/_local_setup_util_sh.py'
+[6.616s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ayush/ARC_26/install/setup.sh'
+[6.619s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ayush/ARC_26/install/local_setup.bash'
+[6.620s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ayush/ARC_26/install/setup.bash'
+[6.623s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ayush/ARC_26/install/local_setup.zsh'
+[6.624s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ayush/ARC_26/install/setup.zsh'

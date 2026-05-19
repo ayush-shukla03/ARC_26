@@ -197,6 +197,43 @@ kratos_controllers_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kratos_controllers_uninstall.dir/build.make CMakeFiles/kratos_controllers_uninstall.dir/build
 .PHONY : kratos_controllers_uninstall/fast
 
+#=============================================================================
+# Target rules for targets named kratos_controllers
+
+# Build rule for target.
+kratos_controllers: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kratos_controllers
+.PHONY : kratos_controllers
+
+# fast build rule for target.
+kratos_controllers/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kratos_controllers.dir/build.make CMakeFiles/kratos_controllers.dir/build
+.PHONY : kratos_controllers/fast
+
+scripts/double_ackermann_controller.o: scripts/double_ackermann_controller.cpp.o
+.PHONY : scripts/double_ackermann_controller.o
+
+# target to build an object file
+scripts/double_ackermann_controller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kratos_controllers.dir/build.make CMakeFiles/kratos_controllers.dir/scripts/double_ackermann_controller.cpp.o
+.PHONY : scripts/double_ackermann_controller.cpp.o
+
+scripts/double_ackermann_controller.i: scripts/double_ackermann_controller.cpp.i
+.PHONY : scripts/double_ackermann_controller.i
+
+# target to preprocess a source file
+scripts/double_ackermann_controller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kratos_controllers.dir/build.make CMakeFiles/kratos_controllers.dir/scripts/double_ackermann_controller.cpp.i
+.PHONY : scripts/double_ackermann_controller.cpp.i
+
+scripts/double_ackermann_controller.s: scripts/double_ackermann_controller.cpp.s
+.PHONY : scripts/double_ackermann_controller.s
+
+# target to generate assembly for a file
+scripts/double_ackermann_controller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kratos_controllers.dir/build.make CMakeFiles/kratos_controllers.dir/scripts/double_ackermann_controller.cpp.s
+.PHONY : scripts/double_ackermann_controller.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,6 +249,10 @@ help:
 	@echo "... test"
 	@echo "... kratos_controllers_uninstall"
 	@echo "... uninstall"
+	@echo "... kratos_controllers"
+	@echo "... scripts/double_ackermann_controller.o"
+	@echo "... scripts/double_ackermann_controller.i"
+	@echo "... scripts/double_ackermann_controller.s"
 .PHONY : help
 
 

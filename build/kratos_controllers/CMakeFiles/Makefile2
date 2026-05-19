@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/ayush/ARC_26/build/kratos_controllers
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all:
+all: CMakeFiles/kratos_controllers.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,6 +73,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/kratos_controllers_uninstall.dir/clean
+clean: CMakeFiles/kratos_controllers.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -126,6 +127,32 @@ kratos_controllers_uninstall: CMakeFiles/kratos_controllers_uninstall.dir/rule
 CMakeFiles/kratos_controllers_uninstall.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kratos_controllers_uninstall.dir/build.make CMakeFiles/kratos_controllers_uninstall.dir/clean
 .PHONY : CMakeFiles/kratos_controllers_uninstall.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/kratos_controllers.dir
+
+# All Build rule for target.
+CMakeFiles/kratos_controllers.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kratos_controllers.dir/build.make CMakeFiles/kratos_controllers.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kratos_controllers.dir/build.make CMakeFiles/kratos_controllers.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ayush/ARC_26/build/kratos_controllers/CMakeFiles --progress-num=1,2 "Built target kratos_controllers"
+.PHONY : CMakeFiles/kratos_controllers.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/kratos_controllers.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayush/ARC_26/build/kratos_controllers/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/kratos_controllers.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ayush/ARC_26/build/kratos_controllers/CMakeFiles 0
+.PHONY : CMakeFiles/kratos_controllers.dir/rule
+
+# Convenience name for target.
+kratos_controllers: CMakeFiles/kratos_controllers.dir/rule
+.PHONY : kratos_controllers
+
+# clean rule for target.
+CMakeFiles/kratos_controllers.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kratos_controllers.dir/build.make CMakeFiles/kratos_controllers.dir/clean
+.PHONY : CMakeFiles/kratos_controllers.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -1,8 +1,13 @@
 /home/ayush/ARC_26/install/rover_description/share/rover_description/launch/display.launch.py
 /home/ayush/ARC_26/install/rover_description/share/rover_description/launch/gazebo.launch.py
 /home/ayush/ARC_26/install/rover_description/share/rover_description/rviz/kratos_config.rviz
+/home/ayush/ARC_26/install/rover_description/share/rover_description/urdf/ros2_control.xacro
 /home/ayush/ARC_26/install/rover_description/share/rover_description/urdf/inertial_macros.xacro
+/home/ayush/ARC_26/install/rover_description/share/rover_description/urdf/wheel_macro.xacro
 /home/ayush/ARC_26/install/rover_description/share/rover_description/urdf/kratos_rover.urdf.xacro
+/home/ayush/ARC_26/install/rover_description/share/rover_description/urdf/gazebo_plugins.xacro
+/home/ayush/ARC_26/install/rover_description/share/rover_description/urdf/core_chassis.xacro
+/home/ayush/ARC_26/install/rover_description/share/rover_description/config/controllers.yaml
 /home/ayush/ARC_26/install/rover_description/share/ament_index/resource_index/package_run_dependencies/rover_description
 /home/ayush/ARC_26/install/rover_description/share/ament_index/resource_index/parent_prefix_path/rover_description
 /home/ayush/ARC_26/install/rover_description/share/rover_description/environment/ament_prefix_path.sh

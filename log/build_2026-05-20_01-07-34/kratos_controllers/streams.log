@@ -1,0 +1,46 @@
+[0.010s] Invoking command in '/home/ayush/ARC_26/build/kratos_controllers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ayush/microros_ws/install/sensor_msgs_py:/home/ayush/microros_ws/install/my_py_pkg:/home/ayush/microros_ws/install/my_py_node:/home/ayush/microros_ws/install/joy_bridge:/home/ayush/controls_ws/install/my_py_pkg:/home/ayush/controls_ws/install/joy_bridge:/home/ayush/controls_ws/install/drive_led_pkg:/opt/ros/humble /usr/bin/cmake /home/ayush/ARC_26/src/kratos_controllers -DCMAKE_INSTALL_PREFIX=/home/ayush/ARC_26/install/kratos_controllers
+[0.028s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.224s] -- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)
+[0.262s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.265s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.271s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.284s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_microxrcedds_c;rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.305s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_microxrcedds_cpp;rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.345s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.347s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.471s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.577s] -- Found controller_interface: 2.51.0 (/opt/ros/humble/share/controller_interface/cmake)
+[0.749s] -- Configuring done
+[0.781s] -- Generating done
+[0.786s] -- Build files have been written to: /home/ayush/ARC_26/build/kratos_controllers
+[0.796s] Invoked command in '/home/ayush/ARC_26/build/kratos_controllers' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ayush/microros_ws/install/sensor_msgs_py:/home/ayush/microros_ws/install/my_py_pkg:/home/ayush/microros_ws/install/my_py_node:/home/ayush/microros_ws/install/joy_bridge:/home/ayush/controls_ws/install/my_py_pkg:/home/ayush/controls_ws/install/joy_bridge:/home/ayush/controls_ws/install/drive_led_pkg:/opt/ros/humble /usr/bin/cmake /home/ayush/ARC_26/src/kratos_controllers -DCMAKE_INSTALL_PREFIX=/home/ayush/ARC_26/install/kratos_controllers
+[0.800s] Invoking command in '/home/ayush/ARC_26/build/kratos_controllers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ayush/microros_ws/install/sensor_msgs_py:/home/ayush/microros_ws/install/my_py_pkg:/home/ayush/microros_ws/install/my_py_node:/home/ayush/microros_ws/install/joy_bridge:/home/ayush/controls_ws/install/my_py_pkg:/home/ayush/controls_ws/install/joy_bridge:/home/ayush/controls_ws/install/drive_led_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ayush/ARC_26/build/kratos_controllers -- -j20 -l20
+[0.890s] [ 50%] [32mBuilding CXX object CMakeFiles/kratos_controllers.dir/scripts/double_ackermann_controller.cpp.o[0m
+[5.798s] [100%] [32m[1mLinking CXX shared library libkratos_controllers.so[0m
+[6.275s] [100%] Built target kratos_controllers
+[6.290s] Invoked command in '/home/ayush/ARC_26/build/kratos_controllers' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ayush/microros_ws/install/sensor_msgs_py:/home/ayush/microros_ws/install/my_py_pkg:/home/ayush/microros_ws/install/my_py_node:/home/ayush/microros_ws/install/joy_bridge:/home/ayush/controls_ws/install/my_py_pkg:/home/ayush/controls_ws/install/joy_bridge:/home/ayush/controls_ws/install/drive_led_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ayush/ARC_26/build/kratos_controllers -- -j20 -l20
+[6.304s] Invoking command in '/home/ayush/ARC_26/build/kratos_controllers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ayush/microros_ws/install/sensor_msgs_py:/home/ayush/microros_ws/install/my_py_pkg:/home/ayush/microros_ws/install/my_py_node:/home/ayush/microros_ws/install/joy_bridge:/home/ayush/controls_ws/install/my_py_pkg:/home/ayush/controls_ws/install/joy_bridge:/home/ayush/controls_ws/install/drive_led_pkg:/opt/ros/humble /usr/bin/cmake --install /home/ayush/ARC_26/build/kratos_controllers
+[6.316s] -- Install configuration: ""
+[6.316s] -- Installing: /home/ayush/ARC_26/install/kratos_controllers/lib/libkratos_controllers.so
+[6.323s] -- Set runtime path of "/home/ayush/ARC_26/install/kratos_controllers/lib/libkratos_controllers.so" to ""
+[6.323s] -- Installing: /home/ayush/ARC_26/install/kratos_controllers/include
+[6.324s] -- Installing: /home/ayush/ARC_26/install/kratos_controllers/include/kratos_controllers
+[6.324s] -- Installing: /home/ayush/ARC_26/install/kratos_controllers/include/kratos_controllers/double_ackermann_controller.hpp
+[6.324s] -- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/kratos_controllers.xml
+[6.324s] -- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/ament_index/resource_index/package_run_dependencies/kratos_controllers
+[6.324s] -- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/ament_index/resource_index/parent_prefix_path/kratos_controllers
+[6.324s] -- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/environment/ament_prefix_path.sh
+[6.324s] -- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/environment/ament_prefix_path.dsv
+[6.325s] -- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/environment/path.sh
+[6.325s] -- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/environment/path.dsv
+[6.325s] -- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/local_setup.bash
+[6.325s] -- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/local_setup.sh
+[6.325s] -- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/local_setup.zsh
+[6.325s] -- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/local_setup.dsv
+[6.325s] -- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/package.dsv
+[6.325s] -- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/ament_index/resource_index/packages/kratos_controllers
+[6.325s] -- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/ament_index/resource_index/controller_interface__pluginlib__plugin/kratos_controllers
+[6.325s] -- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/cmake/kratos_controllersConfig.cmake
+[6.325s] -- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/cmake/kratos_controllersConfig-version.cmake
+[6.325s] -- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/package.xml
+[6.328s] Invoked command in '/home/ayush/ARC_26/build/kratos_controllers' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ayush/microros_ws/install/sensor_msgs_py:/home/ayush/microros_ws/install/my_py_pkg:/home/ayush/microros_ws/install/my_py_node:/home/ayush/microros_ws/install/joy_bridge:/home/ayush/controls_ws/install/my_py_pkg:/home/ayush/controls_ws/install/joy_bridge:/home/ayush/controls_ws/install/drive_led_pkg:/opt/ros/humble /usr/bin/cmake --install /home/ayush/ARC_26/build/kratos_controllers

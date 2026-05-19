@@ -1,5 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.000332] (-) JobUnselected: {'identifier': 'drive_controls'}
-[0.000358] (-) JobUnselected: {'identifier': 'kratos_controllers'}
-[0.000374] (-) JobUnselected: {'identifier': 'rover_description'}
-[0.000390] (-) EventReactorShutdown: {}

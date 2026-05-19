@@ -1,6 +1,9 @@
 source;share/kratos_controllers/hook/cmake_prefix_path.ps1
 source;share/kratos_controllers/hook/cmake_prefix_path.dsv
 source;share/kratos_controllers/hook/cmake_prefix_path.sh
+source;share/kratos_controllers/hook/ld_library_path_lib.ps1
+source;share/kratos_controllers/hook/ld_library_path_lib.dsv
+source;share/kratos_controllers/hook/ld_library_path_lib.sh
 source;share/kratos_controllers/local_setup.bash
 source;share/kratos_controllers/local_setup.dsv
 source;share/kratos_controllers/local_setup.ps1

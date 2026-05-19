@@ -1,0 +1,40 @@
+-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_microxrcedds_c;rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_microxrcedds_cpp;rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found controller_interface: 2.51.0 (/opt/ros/humble/share/controller_interface/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ayush/ARC_26/build/kratos_controllers
+[ 50%] [32mBuilding CXX object CMakeFiles/kratos_controllers.dir/scripts/double_ackermann_controller.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library libkratos_controllers.so[0m
+[100%] Built target kratos_controllers
+-- Install configuration: ""
+-- Installing: /home/ayush/ARC_26/install/kratos_controllers/lib/libkratos_controllers.so
+-- Set runtime path of "/home/ayush/ARC_26/install/kratos_controllers/lib/libkratos_controllers.so" to ""
+-- Installing: /home/ayush/ARC_26/install/kratos_controllers/include
+-- Installing: /home/ayush/ARC_26/install/kratos_controllers/include/kratos_controllers
+-- Installing: /home/ayush/ARC_26/install/kratos_controllers/include/kratos_controllers/double_ackermann_controller.hpp
+-- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/kratos_controllers.xml
+-- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/ament_index/resource_index/package_run_dependencies/kratos_controllers
+-- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/ament_index/resource_index/parent_prefix_path/kratos_controllers
+-- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/environment/ament_prefix_path.sh
+-- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/environment/ament_prefix_path.dsv
+-- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/environment/path.sh
+-- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/environment/path.dsv
+-- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/local_setup.bash
+-- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/local_setup.sh
+-- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/local_setup.zsh
+-- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/local_setup.dsv
+-- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/package.dsv
+-- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/ament_index/resource_index/packages/kratos_controllers
+-- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/ament_index/resource_index/controller_interface__pluginlib__plugin/kratos_controllers
+-- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/cmake/kratos_controllersConfig.cmake
+-- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/cmake/kratos_controllersConfig-version.cmake
+-- Installing: /home/ayush/ARC_26/install/kratos_controllers/share/kratos_controllers/package.xml
