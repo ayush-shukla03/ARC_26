@@ -8,8 +8,8 @@
         <xacro:macro name="steer_interface" params="prefix">
             <joint name="${prefix}_steer_joint">
                 <command_interface name="position"/>
-                    <param name="min">-90</param>
-                    <param name="max">90</param>
+                    <param name="min">-1.5708</param>
+                    <param name="max">1.5708</param>
                 <state_interface name="position"/>
             </joint>
         </xacro:macro>
