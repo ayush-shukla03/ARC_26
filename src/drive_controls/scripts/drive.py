@@ -11,7 +11,7 @@ class Drive(Node):
     def __init__(self):
         super().__init__('drive_node')
 
-        self.deadzone = 0.1   # for joystick floats
+        self.deadzone = 0.5  # for joystick floats
 
         # Store joystick values
         self.linear = 0.0
